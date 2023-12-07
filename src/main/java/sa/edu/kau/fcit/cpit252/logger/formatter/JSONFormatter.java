@@ -1,14 +1,20 @@
 package sa.edu.kau.fcit.cpit252.logger.formatter;
 
 
-public class JSONFormatter  {
+import sa.edu.kau.fcit.cpit252.logger.handlers.BaseLogger;
+
+public class JSONFormatter extends FormatDecorator {
+
+    public JSONFormatter(BaseLogger logger){
+        super.logger = logger;
+    }
 
     public String getLabel() {
-        return ", JSONFormatter";
+        return super.logger.getLabel() + ", JSONFormatter";
     }
 
 
     public String getLevel() {
-        return "Info ";
+        return "Info " + super.logger.getLevel();
     }
 }

@@ -1,6 +1,6 @@
 package sa.edu.kau.fcit.cpit252.logger.handlers;
 
-public class DatabaseLogger {
+public class DatabaseLogger extends BaseLogger {
     public DatabaseLogger() {
         label = "Database logger";
     }

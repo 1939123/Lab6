@@ -1,12 +1,18 @@
 package sa.edu.kau.fcit.cpit252.logger.formatter;
 
-public class CSVFormatter {
+import sa.edu.kau.fcit.cpit252.logger.handlers.BaseLogger;
+
+public class CSVFormatter extends FormatDecorator{
+
+    public CSVFormatter(BaseLogger logger){
+        super.logger = logger;
+    }
 
     public String getLabel() {
-        return  ", CSVFormatter";
+        return super.logger.getLabel() + ", CSVFormatter";
     }
 
     public String getLevel() {
-        return "Info ";
+        return "Info " + super.logger.getLevel();
     }
 }
